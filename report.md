@@ -54,7 +54,10 @@ where \(V_{ov} = V_{gs} - V_{th}\) and \(k_n = \mu_n C_{ox} \frac{W}{L}\).
 6. Execute transient analysis to visualize the amplifier's response over time. Take `.trans 5m`.
 7. Analyze the output waveform to verify amplification.
 
-## Circuit Analysis & Calculations:
+## Circuit:
+![Alt Text]([URL](https://github.com/Sudarshan-R-Srinivas/Sudarshan-LIC-Report-/blob/main/img1.jpeg?raw=true))
+
+## Analysis & Calculations:
 - Power: 50µW
 - Loop Equation: 
   \[
