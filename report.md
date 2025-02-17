@@ -82,7 +82,7 @@ where \(V_{ov} = V_{gs} - V_{th}\) and \(k_n = \mu_n C_{ox} \frac{W}{L}\).
 ### 3. AC Analysis:
 - Gain: -20dB.
 
-## Inference & Analysis:
+## Inference:
 
 - **Width Dependency:** The MOSFET width directly influences the drain current \(I_d\), impacting the gain and operating point of the amplifier.
 - **DC Analysis Significance:** Ensuring the MOSFET operates in the saturation region is crucial for achieving consistent amplification without distortion.
