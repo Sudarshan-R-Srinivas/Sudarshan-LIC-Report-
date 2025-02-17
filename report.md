@@ -104,3 +104,98 @@ where \(V_{ov} = V_{gs} - V_{th}\) and \(k_n = \mu_n C_{ox} \frac{W}{L}\).
 - **AC Analysis Importance:** The frequency response analysis aids in understanding bandwidth limitations and optimizing gain for better performance in communication and signal processing applications.
   
 - **Overall Performance:** The amplifier exhibits stable performance, with predictable phase shift and gain characteristics, making it suitable for amplification tasks in integrated circuits. The results align with theoretical expectations, demonstrating that careful selection of MOSFET dimensions and biasing parameters significantly impacts circuit behavior.
+
+
+
+# Circuit 2:
+ ![pmos](https://github.com/user-attachments/assets/96a999f3-2b65-4d22-9943-12b5044ae72d)
+
+## Working
+This circuit represents a CMOS inverter, implemented using a common-source amplifier with an active load. It consists of two MOSFETs: an NMOS transistor (M1) and a PMOS transistor (M2), which work together to process input signals. The PMOS transistor functions as the pull-up component, while the NMOS transistor serves as the pull-down component. When the input voltage is high, the NMOS transistor turns on, pulling the output low. Conversely, when the input voltage is low, the PMOS transistor is activated, pulling the output high. This design is commonly used in amplifier circuits due to its high efficiency and gain properties.
+
+---
+
+## Procedure
+1. **Circuit Design:** Create the schematic of the CMOS inverter using LTspice, incorporating an NMOS and PMOS transistor.
+2. **Component Selection:** Define appropriate MOSFET parameters, resistances, and voltage sources required for the simulation.
+3. **Simulation Setup:**
+   - Perform **DC analysis** to determine the MOSFET’s operating point.
+   - Conduct **AC analysis** to observe frequency-dependent gain variations.
+   - Run **transient analysis** to study the circuit’s response to time-varying signals.
+4. **Execution:** Run each analysis using LTspice simulation commands.
+5. **Data Collection:** Record voltage and current values, frequency response, and transient waveforms for further interpretation.
+
+---
+
+## Different Types of Analysis
+
+### DC Analysis
+DC analysis is conducted to determine the MOSFET’s biasing conditions by evaluating voltage and current levels at various circuit points. For a common-source amplifier, this includes calculating:
+- **Drain current (ID)**
+- **Gate-source voltage (VGS)**
+- **Operation mode verification** (cutoff, triode, or saturation region)
+
+Setting an appropriate DC bias ensures the amplifier operates efficiently before an AC signal is applied. In LTspice, this is executed using the `.op` command.
+
+---
+
+### AC Analysis
+AC analysis examines the gain (Av) of the amplifier over a range of frequencies to study its response characteristics. This helps in determining:
+- **Bandwidth** (range over which the amplifier functions effectively)
+- **-3dB cutoff frequency** (point where gain drops by 3dB)
+
+Since small-signal operation is assumed, the MOSFET’s behavior is linearized around its bias point. The analysis is performed using the `.ac dec 20 0.1 1T` command in LTspice, which conducts a frequency sweep from 0.1 Hz to 1 THz. The gain is calculated using the equation:
+```math
+A_v = - g_m \times R_D
+```
+
+---
+
+### Transient Analysis
+Transient analysis is used to observe how the circuit behaves in real time when an AC input signal is applied. This analysis helps in visualizing:
+- **Signal amplification**
+- **Time-domain waveform response**
+- **Possible distortion effects**
+
+It simulates how the circuit processes different input waveforms, such as sine waves and pulses. In LTspice, this is executed using the `.tran 5m` command, which runs a 5-millisecond simulation to analyze real-time behavior.
+
+---
+
+## Analysis and Calculation
+
+### DC Analysis:
+- **Drain Current (ID):** Calculated using MOSFET equations.
+- **Gate-Source Voltage (VGS):** Measured to verify the operating region.
+- **Operating Mode:** Confirm whether the MOSFET is in the active region.
+
+### AC Analysis:
+- **Gain Calculation:**
+```math
+A_v = - g_m \times R_D
+```
+- **Cutoff Frequency Determination:** Extracted from the frequency response graph.
+
+### Transient Analysis:
+- **Output Waveform Verification:** Compare the output signal to the expected amplification behavior.
+- **Signal Integrity Check:** Observe any distortions or phase shifts.
+
+---
+
+## Results
+
+### DC Analysis:
+- The biasing voltages and currents were verified, confirming that the MOSFET operates in the correct region.
+
+### AC Analysis:
+- The amplifier's gain was observed across different frequencies. The -3dB cutoff frequency and bandwidth were determined.
+
+### Transient Analysis:
+- The circuit successfully amplified the AC input signal, maintaining waveform integrity with minimal distortion.
+
+---
+
+## Inference
+From the analysis, it is evident that the CMOS inverter functions effectively as a common-source amplifier with an active load. The DC analysis ensured proper biasing, while AC analysis provided insights into the frequency response. Transient analysis further confirmed signal amplification capabilities with minimal distortion. The results validate that this circuit is suitable for amplification applications, offering high efficiency and gain.
+
+
+
