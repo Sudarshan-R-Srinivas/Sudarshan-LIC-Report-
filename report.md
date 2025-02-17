@@ -55,7 +55,8 @@ where \(V_{ov} = V_{gs} - V_{th}\) and \(k_n = \mu_n C_{ox} \frac{W}{L}\).
 7. Analyze the output waveform to verify amplification.
 
 ## Circuit:
-![Alt Text]([URL](https://github.com/Sudarshan-R-Srinivas/Sudarshan-LIC-Report-/blob/main/img1.jpeg?raw=true))
+![Alt Text](https://github.com/user-attachments/assets/56d3f449-828e-432a-98e0-c9e03ccaa607)
+
 
 ## Analysis & Calculations:
 - Power: 50µW
