@@ -95,11 +95,11 @@ where \(V_{ov} = V_{gs} - V_{th}\) and \(k_n = \mu_n C_{ox} \frac{W}{L}\).
 ## Inference:
 
 - **Width Dependency:** The MOSFET width directly influences the drain current \(I_d\), impacting the gain and operating point of the amplifier.
-- 
+  
 - **DC Analysis Significance:** Ensuring the MOSFET operates in the saturation region is crucial for achieving consistent amplification without distortion.
-- 
+  
 - **Transient Analysis Insight:** The observed phase shift and signal distortion characteristics help in assessing the amplifier’s effectiveness in real-world signal processing applications.
-- 
+  
 - **AC Analysis Importance:** The frequency response analysis aids in understanding bandwidth limitations and optimizing gain for better performance in communication and signal processing applications.
-- 
+  
 - **Overall Performance:** The amplifier exhibits stable performance, with predictable phase shift and gain characteristics, making it suitable for amplification tasks in integrated circuits. The results align with theoretical expectations, demonstrating that careful selection of MOSFET dimensions and biasing parameters significantly impacts circuit behavior.
