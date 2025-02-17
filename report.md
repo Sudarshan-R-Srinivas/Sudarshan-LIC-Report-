@@ -75,7 +75,7 @@ where \(V_{ov} = V_{gs} - V_{th}\) and \(k_n = \mu_n C_{ox} \frac{W}{L}\).
 ## Results:
 
 ### 1. DC Analysis:
-![DC Analysis](https://github.com/user-attachments/assets/3987f72b-4477-44b8-85b2-6fb333b8ea2b
+![DC Analysis](https://github.com/user-attachments/assets/3987f72b-4477-44b8-85b2-6fb333b8ea2b)
 
 - \(I_d = 27.7\)µA
 - \(V_{out} = 1.77V\)
