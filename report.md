@@ -55,7 +55,7 @@ where \(V_{ov} = V_{gs} - V_{th}\) and \(k_n = \mu_n C_{ox} \frac{W}{L}\).
 7. Analyze the output waveform to verify amplification.
 
 ## Circuit:
-![Alt Text](https://github.com/user-attachments/assets/56d3f449-828e-432a-98e0-c9e03ccaa607)
+![Circuit](https://github.com/user-attachments/assets/56d3f449-828e-432a-98e0-c9e03ccaa607)
 
 
 ## Analysis & Calculations:
@@ -75,15 +75,21 @@ where \(V_{ov} = V_{gs} - V_{th}\) and \(k_n = \mu_n C_{ox} \frac{W}{L}\).
 ## Results:
 
 ### 1. DC Analysis:
+![DC Analysis](https://github.com/user-attachments/assets/3987f72b-4477-44b8-85b2-6fb333b8ea2b
+
 - \(I_d = 27.7\)µA
 - \(V_{out} = 1.77V\)
 - Optimal operating point: (1.77V, 27.7µA) for \(W = 487\)nm
 
 ### 2. Transient Analysis:
+![Transient Analysis Graph](https://github.com/user-attachments/assets/6c3257c2-e93d-4a27-9af7-c4867c4cc393)
+
 - Confirmed 180-degree phase shift between input and output.
 - DC level shift observed.
 
 ### 3. AC Analysis:
+![AC Analysis Graph](https://github.com/user-attachments/assets/912e7032-b2ad-4883-8136-224b350727a1)
+
 - Gain: -20dB.
 
 ## Inference:
