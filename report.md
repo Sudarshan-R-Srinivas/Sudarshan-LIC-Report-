@@ -130,7 +130,8 @@ To construct the common-source amplifier with a diode-connected MOSFET, the foll
 - **Bias DC Source:** Helps set the appropriate gate voltage for proper transistor operation.  
 
 ## Circuit Diagram  
- 
+ ![Circuit Diagram](https://github.com/user-attachments/assets/4b8af9d3-5d73-40ad-b220-10c7ebae5b02)
+
 
 ## Procedure  
 
@@ -158,8 +159,12 @@ These dimensions significantly affect the circuit’s electrical characteristics
 
 3. **Running the DC Analysis:**  
    - A **DC sweep** is performed to determine **Vout** and **Id**.  
+---
+## Results
 
-**DC Analysis Results:**  
+## DC Analysis :
+![DC Analysis](https://github.com/user-attachments/assets/1fff8dbd-df17-4519-a9a0-97771d9849f3)
+
 - **Drain Current through NMOS (Id1) = 27.755µA**  
 - **Drain Current through PMOS (Id2) = 27.755µA**  
 - **Output Voltage (Vout) = 1.79981V**  
@@ -169,6 +174,8 @@ These dimensions significantly affect the circuit’s electrical characteristics
 ---
 
 ## Transient Analysis  
+![Transient Analysis](https://github.com/user-attachments/assets/784d71c8-b6ff-4393-a5de-f48af20209bb)
+
 1. **Applying an AC Signal:**  
    - A **sine wave** is used as the input signal.  
 
@@ -179,11 +186,12 @@ These dimensions significantly affect the circuit’s electrical characteristics
 - The output waveform is **inverted** compared to the input signal.  
 - This phase shift is a fundamental characteristic of a **CS amplifier**.  
 
-*(Insert transient analysis image here)*  
 
 ---
 
 ## AC Analysis  
+![AC Analysis](https://github.com/user-attachments/assets/9fa05e0b-b0a8-4042-af73-6b21635fd387)
+
 1. **Performing Frequency Response Analysis:**  
    - AC analysis is conducted to measure the gain and response across different frequencies.  
 
