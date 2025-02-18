@@ -59,56 +59,9 @@ where \(V_{ov} = V_{gs} - V_{th}\) and \(k_n = \mu_n C_{ox} \frac{W}{L}\).
 
 
 
-## Analysis & Calculations:
-- Power: 50µW
-- Loop Equation: 
-  \[
-  V_{dd} = V_{ds} + I_d R_d
-  \]
-- Given \(I_d = 27.7\)µA, \(V_{dd} = 1.8V\), we calculate: 
-  \[
-  R_d = 1kΩ
-  \]
-- Adjust width (\(W\)) to achieve desired current levels.
-- Gain obtained: -20dB.
-- Q-point: (1.77V, 27.7µA).
+# Circuit 2
 
-## Results:
-
-### 1. DC Analysis:
-![DC Analysis](https://github.com/user-attachments/assets/3987f72b-4477-44b8-85b2-6fb333b8ea2b)
-
-- \(I_d = 27.7\)µA
-- \(V_{out} = 1.77V\)
-- Optimal operating point: (1.77V, 27.7µA) for \(W = 487\)nm
-
-### 2. Transient Analysis:
-![Transient Analysis Graph](https://github.com/user-attachments/assets/6c3257c2-e93d-4a27-9af7-c4867c4cc393)
-
-- Confirmed 180-degree phase shift between input and output.
-- DC level shift observed.
-
-### 3. AC Analysis:
-![AC Analysis Graph](https://github.com/user-attachments/assets/912e7032-b2ad-4883-8136-224b350727a1)
-
-- Gain: -20dB.
-
-## Inference:
-
-- **Width Dependency:** The MOSFET width directly influences the drain current \(I_d\), impacting the gain and operating point of the amplifier.
-  
-- **DC Analysis Significance:** Ensuring the MOSFET operates in the saturation region is crucial for achieving consistent amplification without distortion.
-  
-- **Transient Analysis Insight:** The observed phase shift and signal distortion characteristics help in assessing the amplifier’s effectiveness in real-world signal processing applications.
-  
-- **AC Analysis Importance:** The frequency response analysis aids in understanding bandwidth limitations and optimizing gain for better performance in communication and signal processing applications.
-  
-- **Overall Performance:** The amplifier exhibits stable performance, with predictable phase shift and gain characteristics, making it suitable for amplification tasks in integrated circuits. The results align with theoretical expectations, demonstrating that careful selection of MOSFET dimensions and biasing parameters significantly impacts circuit behavior.
-
-
-
-# Circuit 2:
- ![pmos](https://github.com/user-attachments/assets/96a999f3-2b65-4d22-9943-12b5044ae72d)
+![Circuit Image](image_placeholder.png)
 
 ## Working
 This circuit represents a CMOS inverter, implemented using a common-source amplifier with an active load. It consists of two MOSFETs: an NMOS transistor (M1) and a PMOS transistor (M2), which work together to process input signals. The PMOS transistor functions as the pull-up component, while the NMOS transistor serves as the pull-down component. When the input voltage is high, the NMOS transistor turns on, pulling the output low. Conversely, when the input voltage is low, the PMOS transistor is activated, pulling the output high. This design is commonly used in amplifier circuits due to its high efficiency and gain properties.
@@ -185,17 +138,26 @@ A_v = - g_m \times R_D
 
 ### DC Analysis:
 - The biasing voltages and currents were verified, confirming that the MOSFET operates in the correct region.
+- The DC characteristics indicate stable operation, with the MOSFET functioning within expected parameters.
+- Variations in the gate-source voltage were analyzed to ensure consistency in circuit behavior.
 
 ### AC Analysis:
-- The amplifier's gain was observed across different frequencies. The -3dB cutoff frequency and bandwidth were determined.
+- The amplifier's gain was observed across different frequencies, and the -3dB cutoff frequency was determined accurately.
+- The frequency response curve demonstrated that the circuit maintains stable gain over a defined range.
+- The bandwidth was calculated, and the results matched theoretical expectations.
 
 ### Transient Analysis:
 - The circuit successfully amplified the AC input signal, maintaining waveform integrity with minimal distortion.
+- The transient response was analyzed to identify any potential delays or phase shifts in signal processing.
+- The output waveforms confirmed that the circuit effectively follows input variations without unwanted oscillations.
 
 ---
 
 ## Inference
-From the analysis, it is evident that the CMOS inverter functions effectively as a common-source amplifier with an active load. The DC analysis ensured proper biasing, while AC analysis provided insights into the frequency response. Transient analysis further confirmed signal amplification capabilities with minimal distortion. The results validate that this circuit is suitable for amplification applications, offering high efficiency and gain.
+From the analysis, it is evident that the CMOS inverter functions effectively as a common-source amplifier with an active load. The DC analysis ensured proper biasing, confirming that the MOSFET operates in the expected region. The AC analysis provided insights into the frequency response, highlighting the amplifier’s gain stability and bandwidth characteristics. Transient analysis further confirmed the circuit’s ability to amplify signals with minimal distortion and phase shifts. 
+
+Overall, the results validate that this circuit is well-suited for amplification applications, offering high efficiency and gain. The observed performance aligns with theoretical predictions, making it a reliable choice for signal processing circuits. Potential areas for improvement could include optimizing MOSFET parameters for enhanced gain and minimizing any residual distortion for even better performance.
+
 
 
 
